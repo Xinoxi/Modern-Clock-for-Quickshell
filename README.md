@@ -45,4 +45,4 @@ quickshell
   <img src="image/IMG_6423.PNG"/>
 </p>
 
-(Everything can be easily changed in the Clock.qml configuration file)
+
