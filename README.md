@@ -7,6 +7,7 @@
 :sparkles: Lightweight clock widget for Quickshell.<br>
 Displays day, date and time with modern fonts and drop shadow.<br>
 Easy to configure — just edit blocks to set position :alarm_clock:.
+(Work on WM: Hyprland, Sway, Wayfire, River)
 </p>
 
 ## 📦 Installation
