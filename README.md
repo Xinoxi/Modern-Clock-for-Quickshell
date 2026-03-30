@@ -13,7 +13,7 @@ Easy to configure — just edit blocks to set position :alarm_clock:.
 
 1. Clone repository
 ```bash 
-git clone https://github.com/Xinoxi/Morden-Clock-for-Quickshell.git
+git clone https://github.com/Xinoxi/Modern-Clock-for-Quickshell.git
 ```
 
 2. Create Quickshell config folder if you do not have
