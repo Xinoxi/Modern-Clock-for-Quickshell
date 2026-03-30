@@ -13,9 +13,9 @@ ShellRoot {
             anchors.left: true                 
             anchors.bottom: true               
         //  Position     
-            margins.top: -680                   
+            margins.top: -770                   
             margins.right: 0                    
-            margins.left: -820                     
+            margins.left: 0                   
             margins.bottom: 0                   
         // └─────────────────────────────────────┘
 
