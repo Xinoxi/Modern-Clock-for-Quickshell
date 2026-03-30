@@ -25,8 +25,15 @@ ShellRoot {
         color: "transparent"
 
         // --- Fonts ---
-        FontLoader { id: font_anurati; source: "/home/user/.local/share/fonts/Anurati.otf" }
-        FontLoader { id: font_poppins; source: "/home/user/.local/share/fonts/Poppins.ttf" }
+         FontLoader {
+             id: font_anurati
+              source: Qt.resolvedUrl("Anurati.otf")
+}
+
+         FontLoader {
+             id: font_poppins
+		            source: Qt.resolvedUrl("Poppins.ttf")
+}
 
         // --- Time ---
         Timer {
