@@ -36,18 +36,10 @@ ShellRoot {
 }
 
         // --- Time ---
-        Timer {
-            interval: 1000
-            running: true
-            repeat: true
-            triggeredOnStart: true
-            onTriggered: {
-                var now = new Date()
-                display_day.text  = Qt.formatDate(now, "dddd").toUpperCase()
-                display_date.text = Qt.formatDate(now, "dd MMM yyyy").toUpperCase()
-                display_time.text = "- " + Qt.formatTime(now, "hh:mm") + " -"
-            }
-        }
+ 		SystemClock {
+ 			id: clock
+ 			precision: SystemClock.Seconds
+}
 
         // --- Content ---
         Column {
@@ -55,22 +47,23 @@ ShellRoot {
             anchors.centerIn: parent
             spacing: 4
 
-            // ── Days of the week ──────────────────────────
+// ── Days of the week ──────────────────────────
             Item {
-                implicitWidth: display_day.implicitWidth
-                implicitHeight: display_day.implicitHeight
+                implicitWidth: clock_day.implicitWidth
+                implicitHeight: clock_day.implicitHeight
                 anchors.horizontalCenter: parent.horizontalCenter
 
                 // shadow
                 Text {
                     x: 2; y: 2
-                    text: display_day.text
-                    font: display_day.font
+                    text: clock_day.text
+                    font: clock_day.font
                     color: "#55000000"
                 }
                 // Main text
                 Text {
-                    id: display_day
+                    id: clock_day
+                    text: Qt.formatDate(clock.date, "dddd").toUpperCase()
                     font.family: font_anurati.name
                     font.pixelSize: 90
                     color: "#ffffff"
@@ -80,20 +73,21 @@ ShellRoot {
 
             // ── Date ────────────────────────────────
             Item {
-                implicitWidth: display_date.implicitWidth
-                implicitHeight: display_date.implicitHeight
+                implicitWidth: clock_date.implicitWidth
+                implicitHeight: clock_date.implicitHeight
                 anchors.horizontalCenter: parent.horizontalCenter
 
                 // shadow
                 Text {
                     x: 1; y: 1
-                    text: display_date.text
-                    font: display_date.font
+                    text: clock_date.text
+                    font: clock_date.font
                     color: "#55000000"
                 }
                 // Main text
                 Text {
-                    id: display_date
+                    id: clock_date
+                    text: Qt.formatDate(clock.date, "dd MMM yyyy").toUpperCase()
                     font.family: font_poppins.name
                     font.pixelSize: 20
                     color: "#ffffff"
@@ -102,26 +96,26 @@ ShellRoot {
 
             // ── Time  ─────────────────────────────────
             Item {
-                implicitWidth: display_time.implicitWidth
-                implicitHeight: display_time.implicitHeight
+                implicitWidth: clock_time.implicitWidth
+                implicitHeight: clock_time.implicitHeight
                 anchors.horizontalCenter: parent.horizontalCenter
 
                 // shadow
                 Text {
                     x: 1; y: 1
-                    text: display_time.text
-                    font: display_time.font
+                    text: clock_time.text
+                    font: clock_time.font
                     color: "#55000000"
                 }
                 // Main text
                 Text {
-                    id: display_time
+                    id: clock_time
+                    text: "- " + Qt.formatTime(clock.date, "hh:mm") + " -"
                     font.family: font_poppins.name
                     font.pixelSize: 17
                     color: "#ffffff"
                 }
             }
-
         }
     }
 }
