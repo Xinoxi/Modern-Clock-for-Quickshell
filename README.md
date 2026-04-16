@@ -23,7 +23,8 @@
 - Fully customizable position and style
 - Plug-and-play for popular Wayland compositors
 
-[Example configuration](./image/example.mp4)
+Example configuration
+the clock settings are in the video /image/example.mp4
 
 ## 📦 Installation
 
