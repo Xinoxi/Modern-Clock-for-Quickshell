@@ -21,6 +21,8 @@
 - Fully customizable position and style
 - Plug-and-play for popular Wayland compositors
 
+[Example configuration](./example.mp4)
+
 ## 📦 Installation
 
 1. Clone the repository
