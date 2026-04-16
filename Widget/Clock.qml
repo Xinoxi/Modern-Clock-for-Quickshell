@@ -13,7 +13,7 @@ ShellRoot {
     // font_anurati font_beyno font_azedo font_serif //
 	///////////////////////////////////////////////////
 	
-    property string activeDownFont: font_varela .name
+    property string activeDownFont: font_poppins .name
 
 	////////////////////////////////////////
 	// font_poppins font_varela font_lato //
@@ -31,8 +31,8 @@ ShellRoot {
     
 	//--Size--
 	property int sizeTop:  90
-	property int sizeCenter: 23
-	property int sizeDown:  20
+	property int sizeCenter: 20
+	property int sizeDown:  18
 
     //--Spacing--
 	property int spaceWith: 4
