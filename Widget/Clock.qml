@@ -3,49 +3,75 @@ import Quickshell.Wayland
 import QtQuick
 
 ShellRoot {
+	//--Color#--
+	property color textColor: "#ffffff"
+
+	//--Font--
+    property string activeTopFont: font_anurati .name
+    
+	///////////////////////////////////////////////////
+    // font_anurati font_beyno font_azedo font_serif //
+	///////////////////////////////////////////////////
+	
+    property string activeDownFont: font_varela .name
+
+	////////////////////////////////////////
+	// font_poppins font_varela font_lato //
+	////////////////////////////////////////
+	
+    // --- Fonts ---
+    FontLoader { id: font_anurati;  source: Qt.resolvedUrl("Anurati.otf")  }
+	FontLoader { id: font_beyno; source: Qt.resolvedUrl("BEYNO.otf") }
+	FontLoader { id: font_azedo;  source: Qt.resolvedUrl("Azedo-Bold.otf")  }
+	FontLoader { id: font_serif;  source: Qt.resolvedUrl("InstrumentSerif-Regular.ttf")  }
+
+	FontLoader { id: font_poppins;  source: Qt.resolvedUrl("Poppins.ttf")  }
+	FontLoader { id: font_varela;  source: Qt.resolvedUrl("VarelaRound-Regular.ttf") }
+	FontLoader { id: font_lato;  source: Qt.resolvedUrl("Lato-Italic.ttf")  }
+    
+	//--Size--
+	property int sizeTop:  90
+	property int sizeCenter: 23
+	property int sizeDown:  20
+
+    //--Spacing--
+	property int spaceWith: 4
+
+	//--Spacing between text--
+	property int spaceBetweenTopText: 10
+	property int spaceBetweenDownText: 0
+	
     PanelWindow {
         // ┌─────────────────────────────────────┐
         // │           Widget position           │
         // ├─────────────────────────────────────┤
-        // │  active side (true/false)           │
+        // │  Active side (true/false)           │
             anchors.top: true                  
             anchors.right: true                
             anchors.left: true                 
             anchors.bottom: true               
-        //  Position     
+        //    Position     
             margins.top: 0                   
-            margins.right: 0                    
+            margins.right: 0              
             margins.left: 0                   
             margins.bottom: 0                   
         // └─────────────────────────────────────┘
+ 
+ //─────────────────────────────────────────────────────────────────────────
 
         WlrLayershell.layer: WlrLayer.Background
         WlrLayershell.namespace: "clock-widget"
         WlrLayershell.exclusiveZone: -1
         color: "transparent"
 
-        // --- Fonts ---
-         FontLoader {
-             id: font_anurati
-             source: Qt.resolvedUrl("Anurati.otf")
-}
-
-         FontLoader {
-             id: font_poppins
-		         source: Qt.resolvedUrl("Poppins.ttf")
-}
-
         // --- Time ---
- 		SystemClock {
- 			id: clock
- 			precision: SystemClock.Seconds
-}
+ 		SystemClock { id: clock; precision: SystemClock.Seconds }
 
         // --- Content ---
         Column {
             id: container
             anchors.centerIn: parent
-            spacing: 4
+            spacing: spaceWith
 
 // ── Days of the week ──────────────────────────
             Item {
@@ -64,10 +90,11 @@ ShellRoot {
                 Text {
                     id: clock_day
                     text: Qt.formatDate(clock.date, "dddd").toUpperCase()
-                    font.family: font_anurati.name
-                    font.pixelSize: 90
-                    color: "#ffffff"
-                    font.letterSpacing: 10
+                    font.family: activeTopFont
+                    font.pixelSize: sizeTop
+                    color: textColor
+                    font.letterSpacing: spaceBetweenTopText
+                    
                 }
             }
 
@@ -88,9 +115,10 @@ ShellRoot {
                 Text {
                     id: clock_date
                     text: Qt.formatDate(clock.date, "dd MMM yyyy").toUpperCase()
-                    font.family: font_poppins.name
-                    font.pixelSize: 20
-                    color: "#ffffff"
+                    font.family: activeDownFont
+                    font.pixelSize: sizeCenter
+                    color: textColor
+                    font.letterSpacing: spaceBetweenDownText
                 }
             }
 
@@ -111,9 +139,10 @@ ShellRoot {
                 Text {
                     id: clock_time
                     text: "- " + Qt.formatTime(clock.date, "hh:mm") + " -"
-                    font.family: font_poppins.name
-                    font.pixelSize: 17
-                    color: "#ffffff"
+                    font.family: activeDownFont
+                    font.pixelSize: sizeDown
+                    color: textColor
+                    font.letterSpacing: spaceBetweenDownText
                 }
             }
         }
