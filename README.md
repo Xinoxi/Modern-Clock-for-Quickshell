@@ -14,6 +14,11 @@
 
 ---
 
+<h2 align="center">Choose the font you want to use</h2>
+- font_anurati
+- font_beyno               - font_poppins
+- font_azedo               - font_varela
+- font_serif               - font_lato
 ## ✨ Features
 
 - Modern minimalist design with clean fonts
