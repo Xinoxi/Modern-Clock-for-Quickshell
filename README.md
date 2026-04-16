@@ -1,7 +1,7 @@
 <h1 align="center">Modern Clock for Quickshell</h1>
 
 <p align="center">
-  <img src="image/IMG_6426.PNG" width="750" alt="Modern Clock Widget Demo"/>
+  <img src="/image/2026-04-15-232947_hyprshot.png" width="750" alt="Modern Clock Widget Demo"/>
 </p>
 
 <p align="center">
@@ -15,13 +15,13 @@
 ---
 
 <h2 align="center">Choose the font you want to use</h2>
+<h4 align="center">
 |font_anurati|
 |font_beyno  |             | font_poppins |
 |font_azedo  |             | font_varela |
 |font_serif  |             | font_lato |
----
-
-<h1 align="center">Features</h1>
+</h4>
+<h1 align="center">Features ✨</h1>
 
 - Modern minimalist design with clean fonts
 - Real-time day, date and time display
@@ -53,19 +53,19 @@ cp Modern-Clock-for-Quickshell/shell.qml ~/.config/quickshell/
 quickshell
 ```
 ---
-<h1 
-<p align="center">
- Preview of all themes :chart_with_upwards_trend:
-  </p>
-  </h1>
-<p align="center">
-  <img src="image/IMG_6424.PNG"/>
-</p>
+<h2 align="center"> Preview of all themes :chart_with_upwards_trend:</h2>
 
-<p align="center">
-  <img src="image/IMG_6429.PNG"/>
-</p>
+<table align="center">
+  <tr>
+    <td><img src="/image/2026-04-15-235145_hyprshot.png" width="300"/></td>
+    <td><img src="/image/2026-04-15-235210_hyprshot.png" width="300"/></td>
+    <td><img src="/image/IMG_6426.PNG" width="300"/></td>
+  </tr>
+  <tr>
+    <td><img src="/image/2026-04-15-235400_hyprshot.png" width="300"/></td>
+    <td><img src="/image/IMG_6423.PNG" width="300"/></td>
+    <td><img src="/image/IMG_6424.PNG" width="300"/></td>
+  </tr>
+</table>
 
-<p align="center">
-  <img src="image/IMG_6423.PNG"/>
-</p>
+<h3 align="center"> Wallpaper you can download on folder "Wallpaper"</h3>
