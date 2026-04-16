@@ -23,7 +23,7 @@
 - Fully customizable position and style
 - Plug-and-play for popular Wayland compositors
 
-[Example configuration](./example.mp4)
+[Example configuration](./image/example.mp4)
 
 ## 📦 Installation
 
