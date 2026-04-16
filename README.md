@@ -1,7 +1,5 @@
 <h1 align="center">Modern Clock for Quickshell</h1>
 
-<h1 align="center">Modern Clock for Quickshell</h1>
-
 <p align="center">
   <img src="image/IMG_6426.PNG" width="750" alt="Modern Clock Widget Demo"/>
 </p>
